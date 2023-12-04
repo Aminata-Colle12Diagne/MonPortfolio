@@ -47,14 +47,16 @@ border-bottom: .1rem solid rgba(0, 0, 0, .2);
     color: var(--text-color)  ;
     font-weight: 600;
     cursor: default;
+    text-decoration: none;
 }
+
 .navbar a{
     font-size: 1.7rem; 
-    color: var(--text-color)
-    ;
+    color: var(--text-color);
     margin-left: 4rem;
     transition: .3s;
     text-decoration: none;
+    
 
 }
 .navbar a:hover,
@@ -62,10 +64,12 @@ border-bottom: .1rem solid rgba(0, 0, 0, .2);
 color: var(--main-color);
 /* background: linear-gradient(45deg, #f06, #3cf); */
 }
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--text-color);
-    display: none;
+
+#menu-icon {
+        font-size: 3.6rem;
+        color: var(--text-color);
+        display: none;
+    
 }
 .home{
     display: flex;
@@ -88,37 +92,28 @@ span{
     line-height: 1.3;
 }
 
-.home-img img{
-    width: 100%;
-    height: auto;
-    display: block;
-  
+.home-img img {
+    width: 35vw;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    /* background-color: var(--main-color); */
+    /* box-shadow: 0 0 3rem var(--main-color); */
+    /* box-shadow: 10px 5px 5px var(--main-color); */
+    animation: floatImage 4s ease-in-out infinite;
 }
-.home-img{
-      width: 410px;
-    height: 410px;
-    overflow: hidden;
-    border-radius: 50%; /* Assurez-vous que le border-radius est de 50% pour former un cercle */
-    background-size: cover; 
-    background-color: var(--second-bg-color);
-    border: 2 solid var(--main-color);
-    width: 33vw;
-    animation: flaotImage 4s ease-in-out infinite;
- }
 
-
-@keyframes flaotImage{
-    
+@keyframes floatImage {
     0%{
-        transform: translateY(0); 
-     }
-     50%{
-        transform: translateY(-2.4rem); 
-     }
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
     100%{
-        transform: translateY(0); 
-     }
+        transform: translateY(0);
+    }
 }
+
 .home-content p{
     font-size:  1.6rem;
 }
@@ -379,7 +374,7 @@ padding: 2rem 3%;
         min-height: auto;
     }
     .footer{
-        padding: 2rem;
+        padding: 2rem 3%;
     }
 }
 
@@ -396,13 +391,13 @@ padding: 2rem 3%;
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        display: none;
+        /* display: none; */
     }
     .navbar .active{
         display: block;
     }
     .navbar a{
-        display: block;
+       display: block;
         font-size: 2rem;
         margin: 3rem 0;
     }
